@@ -10,7 +10,7 @@ from google.oauth2 import service_account
 scopes = [
     'https://www.googleapis.com/auth/spreadsheets', 
     'https://www.googleapis.com/auth/drive',
-    'https://mail.google.com/' 
+    # 'https://mail.google.com/' 
 ]
 creds = service_account.Credentials.from_service_account_file("credentials.json", scopes=scopes)
 client = gspread.authorize(creds)

@@ -33,7 +33,18 @@ class astrovialsSpider(scrapy.Spider):
 
     def parse(self, response):
             
-            products = response.css('.woocommerce-LoopProduct-link::attr(href )').extract()
+            # products = response.css('.woocommerce-LoopProduct-link::attr(href )').extract()
+            products = [
+                        'https://teahrt.com/product/transdermal-estradiol-spray-30ml-20mg-ml/',
+                        'https://teahrt.com/product/estradiol-valerate/',
+                        'https://teahrt.com/product/estradiol-enanthate-10ml/',
+                        'https://teahrt.com/product/cyproterone-acetate-12-5mg-100ct/',
+                        'https://teahrt.com/product/progesterone-suppository-200mg-60ct/',
+                        'https://teahrt.com/product/sublingual-estradiol-oil-dropper-30ml-20mg-ml/',
+                        'https://teahrt.com/product/estradiol-cypionate-10ml/',
+                        'https://teahrt.com/product/bicalutamide-capsule-50mg-100ct-2/',
+                        'https://teahrt.com/product/estradiol-undecylate-100mg-ml-5ml/',
+                        ]
 
             if len(products) == 0:
                 print('\n')
