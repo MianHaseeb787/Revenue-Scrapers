@@ -33,7 +33,12 @@ class astrovialsSpider(scrapy.Spider):
 
     def parse(self, response):
         
-            products = response.css('#content .elementor-size-sm::attr(href)').extract()
+            # products = response.css('#content .elementor-size-sm::attr(href)').extract()
+            products = ['https://astrovials.com/shop/estradiol-enanthate/',
+                        'https://astrovials.com/shop/estradiol-valerate/',
+                        'https://astrovials.com/shop/estradiol-undecylate/',
+                        # 'https://astrovials.com/shop/progesterone/'
+                        ]
 
             for index, product in enumerate(products):
                 meta = {'index': index}  # Include the index in metadata

@@ -34,8 +34,13 @@ class QuotesSpider(scrapy.Spider):
 
     def parse(self, response):
 
-            products = response.css('.button::attr(href)').extract()
-            
+            # products = response.css('.button::attr(href)').extract()
+            products = ['https://flcts.eu/products/estinj/estradiol-enanthate-10ml/',
+                        'https://flcts.eu/products/estinj/estradiol-undecylate-10ml/',
+                        'https://flcts.eu/products/transdermals/estradiol-gel-50ml-6-67mg-ml/',
+                        'https://flcts.eu/products/suppositories/progesterone-suspension-10000mg-50ml/',
+                        'https://flcts.eu/products/suppositories/progesterone-suppository-200mg/']
+                                    
 
             # meta = {"productsLen" : productsLen}
 

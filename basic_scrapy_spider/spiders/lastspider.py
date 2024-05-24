@@ -35,7 +35,21 @@ class LastSpider(scrapy.Spider):
 
     def parse(self, response):
 
-            products = response.css('.woocommerce-LoopProduct-link::attr(href)').extract()
+            # products = response.css('.woocommerce-LoopProduct-link::attr(href)').extract()
+            products = ['https://otkph.am/product/bicalutamide/',
+                        'https://otkph.am/product/domperidone/',
+                        'https://otkph.am/product/dutasteride/',
+                        'https://otkph.am/product/estradiol-cypionate/',
+                        'https://otkph.am/product/estradiol-enanthate/',
+                        'https://otkph.am/product/estradiol-oral/',
+                        'https://otkph.am/product/estradiol-valerate/',
+                        'https://otkph.am/product/medroxiprogesterone-acetate/',
+                        'https://otkph.am/product/progesterone-capsules/',
+
+                        # 'https://otkph.am/product/progesterone-injections/',
+                        # 'https://otkph.am/product/transdermal-estradiol/',
+                        # 'https://otkph.am/product/transdermal-progesterone/'
+                        ]
             
 
             # meta = {"productsLen" : productsLen}

@@ -32,7 +32,10 @@ class silvermapleSpider(scrapy.Spider):
 
     def parse(self, response):
         
-            products = response.css('.has-medium-font-size a::attr(href)').extract()
+            # products = response.css('.has-medium-font-size a::attr(href)').extract()
+            products = ['https://silvermaplelabs.com/product/estradiol-enanthate-in-castor-oil/',
+                        'https://silvermaplelabs.com/product/estradiol-enanthate-in-mct-oil/',
+                        'https://silvermaplelabs.com/product/estradiol-undecylate-10ml/']
 
             for index, product in enumerate(products):
                 meta = {'index': index}  # Include the index in metadata
