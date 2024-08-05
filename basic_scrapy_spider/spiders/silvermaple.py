@@ -46,7 +46,7 @@ class silvermapleSpider(scrapy.Spider):
     def parseSilverMapleProduct(self, response):
         productName = response.css('.wp-block-column-is-layout-flow .wp-block-post-title::text').get().strip()
         productPrice = response.css('.has-large-font-size bdi::text').get().strip()
-        productStock = response.css('.in-stock::text').get()
+        productStock = response.css('input::attr(max)').get()
 
         if productStock is None:
             productStock = "0"
