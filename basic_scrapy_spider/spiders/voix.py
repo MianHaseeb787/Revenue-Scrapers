@@ -51,7 +51,7 @@ class silvermapleSpider(scrapy.Spider):
         productPrice = price
         productStock = response.css('input::attr(max)').get()
 
-        if productStock is None:
+        if productStock is None or productStock == "":
             productStock = "0"
 
         print('\n')
